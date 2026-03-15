@@ -1,0 +1,49 @@
+[
+  {
+    "_id": 1,
+    "name": "Samsung 55 Inch Smart TV",
+    "category": "Electronics",
+    "price": 65000,
+    "brand": "Samsung",
+    "specifications": {
+      "screen_size": "55 inch",
+      "resolution": "4K UHD",
+      "voltage": "220V"
+    },
+    "warranty": {
+      "period_years": 2,
+      "type": "Manufacturer Warranty"
+    },
+    "features": ["Smart TV", "WiFi", "Bluetooth"]
+  },
+
+  {
+    "_id": 2,
+    "name": "Men's Cotton T-Shirt",
+    "category": "Clothing",
+    "price": 799,
+    "brand": "Levi's",
+    "sizes_available": ["S", "M", "L", "XL"],
+    "colors": ["Black", "White", "Blue"],
+    "material": "100% Cotton",
+    "ratings": {
+      "average": 4.3,
+      "reviews_count": 120
+    }
+  },
+
+  {
+    "_id": 3,
+    "name": "Organic Almonds 500g",
+    "category": "Groceries",
+    "price": 850,
+    "brand": "Organic India",
+    "expiry_date": "2024-12-15",
+    "nutritional_info": {
+      "calories": 579,
+      "protein": "21g",
+      "fat": "50g"
+    },
+    "storage_instructions": "Store in a cool and dry place"
+  }
+]
