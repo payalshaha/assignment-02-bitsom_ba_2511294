@@ -1,12 +1,12 @@
 // OP1: insertMany() — insert all 3 documents
 
-db.sample_documents.insertMany([
+db.products.insertMany([
   {
-    _id: 4,
-    name: "iPhone 11",
+    _id: 1,
+    name: "Sony",
     category: "Electronics",
-    price: 80000,
-    brand: "Apple",
+    price: 65000,
+    brand: "Sony",
     specifications: {
       screen_size: "55 inch",
       resolution: "4K UHD",
@@ -19,11 +19,11 @@ db.sample_documents.insertMany([
     features: ["Smart TV", "WiFi", "Bluetooth"]
   },
   {
-    _id: 5,
-    name: "WoMen's Cotton T-Shirt",
+    _id: 2,
+    name: "Men's Cotton T-Shirt",
     category: "Clothing",
-    price: 1500,
-    brand: "Gap",
+    price: 799,
+    brand: "Levi's",
     sizes_available: ["S", "M", "L", "XL"],
     colors: ["Black", "White", "Blue"],
     material: "100% Cotton",
@@ -33,12 +33,12 @@ db.sample_documents.insertMany([
     }
   },
   {
-    _id: 6,
-    name: "Cashews 500g",
+    _id: 3,
+    name: "Organic Almonds 500g",
     category: "Groceries",
-    price: 2000,
+    price: 850,
     brand: "Organic India",
-    expiry_date: new Date("2026-12-15"),
+    expiry_date: new Date("2024-12-15"),
     nutritional_info: {
       calories: 579,
       protein: "21g",
@@ -50,7 +50,7 @@ db.sample_documents.insertMany([
 
 // OP2: find() — retrieve all Electronics products with price > 20000
 
-db.sample_documents.find({
+db.products.find({
   category: "Electronics",
   price: { $gt: 20000 }
 });
@@ -58,7 +58,7 @@ db.sample_documents.find({
 
 // OP3: find() — retrieve all Groceries expiring before 2025-01-01
 
-db.sample_documents.find({
+db.products.find({
   category: "Groceries",
   expiry_date: { $lt: new Date("2025-01-01") }
 });
@@ -66,15 +66,15 @@ db.sample_documents.find({
 
 // OP4: updateOne() — add a "discount_percent" field to a specific product
 
-db.sample_documents.updateOne(
-  { name: "Samsung 55 Inch Smart TV" },
+db.products.updateOne(
+  { name: "Sony" },
   { $set: { discount_percent: 10 } }
 );
 
 
 // OP5: createIndex() — create an index on category field
 
-db.sample_documents.createIndex({ category: 1 });
+db.products.createIndex({ category: 1 });
 
 // This index improves query performance when filtering products by category
 // (e.g., Electronics, Clothing, Groceries), which is a common query in product catalogs.
