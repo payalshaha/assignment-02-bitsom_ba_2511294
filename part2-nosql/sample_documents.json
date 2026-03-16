@@ -1,10 +1,10 @@
 [
   {
     "_id": 1,
-    "name": "Samsung 55 Inch Smart TV",
+    "name": "Sony",
     "category": "Electronics",
     "price": 65000,
-    "brand": "Samsung",
+    "brand": "Sony",
     "specifications": {
       "screen_size": "55 inch",
       "resolution": "4K UHD",
