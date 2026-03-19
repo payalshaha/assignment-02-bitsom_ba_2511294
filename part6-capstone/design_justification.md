@@ -1,9 +1,13 @@
 ## Storage Systems
 
 In Part 1,  structured data from orders_flat.csv was normalized into multiple related tables to remove redundancy and ensure consistency.
+
 In Part 2, sample_documents.json demonstrated how NoSQL databases handle flexible and nested data. This approach is applied to store electronics, groceries information where attributes such as mobile version, features vary. A document bases NoSQL database allows storing heterogenous data efficiently.
+
 In Part 3, retail_transaction.csv was transformed into star schema for analytical queries.This concept is extended by using OLAP layer for calculating monthly sales, total revenue tec..
+
 In part 4, we used Vector database where using semantic search, we calculates top 2 similar sentences from set with similarity score.
+
 In Part 5, customers.csv, orders.json, and products.parquet were queried directly using DuckDB without preloading.This supports the use of a data lake to store historical data in multiple formats.DuckDB is used on top of this data lake for fast analytical queries and machine learning preparation, such as predicting readmission risk.
 
 ## OLTP vs OLAP Boundary
